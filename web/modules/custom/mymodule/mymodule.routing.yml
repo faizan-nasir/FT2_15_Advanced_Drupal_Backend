@@ -1,7 +1,0 @@
-mymodule.settings:
-  path: '/admin/config/mymodule'
-  defaults:
-    _controller: '\Drupal\mymodule\Controller\MyModuleController::checkPermission'
-    _title: 'MyModule Settings'
-  requirements:
-    _permission: 'custom permission'
