@@ -1,0 +1,8 @@
+name: "My Module 1"
+description: "Modu modu"
+type: module
+package: custom
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - admin_toolbar
