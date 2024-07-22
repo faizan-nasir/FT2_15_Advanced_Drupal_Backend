@@ -5,11 +5,18 @@ namespace Drupal\mymodule\Controller;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Controller\ControllerBase;
 
-class MyModuleController extends ControllerBase
-{
+/**
+ * Controller class to render markups
+ */
+class MyModuleController extends ControllerBase {
   protected $currentUser;
-  public function __construct(AccountInterface $currentUser)
-  {
+
+  /**
+   * Constructor to initialize the current user.
+   *
+   * @param AccountInterface $currentUser
+   */
+  public function __construct(AccountInterface $currentUser) {
     $this->currentUser = $currentUser;
   }
 
@@ -19,8 +26,7 @@ class MyModuleController extends ControllerBase
    * @return array
    *   A render array containing the page content.
    */
-  public function firstFunction()
-  {
+  public function firstFunction() {
     $build = [
       '#markup' => $this->t('This is the content of MyModule settings page.'),
     ];
@@ -33,8 +39,7 @@ class MyModuleController extends ControllerBase
    * @return array
    *   A render array containing the page content.
    */
-  public function checkPermission()
-  {
+  public function checkPermission() {
     if ($this->currentUser->hasPermission('custom permission')) {
       // Get specific user information.
       $name = $this->currentUser->getDisplayName();

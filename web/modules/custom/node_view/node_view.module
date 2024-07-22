@@ -6,6 +6,7 @@
  */
 
 /**
+ * Implements hook_entity_view().
  * Function to increase count of visited of a node page and display it as well.
  *
  * @param array $build
@@ -13,8 +14,7 @@
  * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
  * @return void
  */
-function node_view_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display)
-{
+function node_view_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
   // Check if the entity is a node.
   if ($entity->getEntityTypeId() === 'node') {
     // Get the current session.
@@ -33,7 +33,7 @@ function node_view_entity_view(array &$build, \Drupal\Core\Entity\EntityInterfac
       '#weight' => 100,
       '#cache' => [
         'contexts' => ['session'],
-        'max-age' => 0,
+        'max' => 0,
       ],
     ];
     $build['#cache']['contexts'][] = 'user';
