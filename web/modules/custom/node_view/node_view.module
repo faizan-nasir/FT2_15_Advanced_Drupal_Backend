@@ -31,12 +31,7 @@ function node_view_entity_view(array &$build, \Drupal\Core\Entity\EntityInterfac
     $build['view_count'] = [
       '#markup' => '<p>This node has been viewed ' . $count . ' times in this session.</p>',
       '#weight' => 100,
-      '#cache' => [
-        'contexts' => ['session'],
-        'max' => 0,
-      ],
     ];
-    $build['#cache']['contexts'][] = 'user';
     $messenger = \Drupal::messenger();
     $messenger->addStatus(t('This node has been viewed @count times in this session.', ['@count' => $count]));
   }
