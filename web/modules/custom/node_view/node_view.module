@@ -7,12 +7,6 @@
 
 /**
  * Implements hook_entity_view().
- * Function to increase count of visited of a node page and display it as well.
- *
- * @param array $build
- * @param \Drupal\Core\Entity\EntityInterface $entity
- * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
- * @return void
  */
 function node_view_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
   // Check if the entity is a node.
