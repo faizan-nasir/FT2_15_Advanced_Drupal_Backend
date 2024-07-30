@@ -1,0 +1,5 @@
+name: "My Module"
+description: "This is my first module in drupal."
+type: module
+package: custom
+core_version_requirement: ^10 || ^11
