@@ -1,8 +1,0 @@
-name: 'Node view'
-type: module
-description: 'Hook to display count of a node viewed in a session.'
-package: Custom
-core_version_requirement: ^10 || ^11
-
-dependencies:
-  - drupal:node

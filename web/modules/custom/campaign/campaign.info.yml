@@ -1,0 +1,5 @@
+name: 'campaign'
+type: module
+description: 'Module to display content of the campaign.'
+package: Custom
+core_version_requirement: ^10
