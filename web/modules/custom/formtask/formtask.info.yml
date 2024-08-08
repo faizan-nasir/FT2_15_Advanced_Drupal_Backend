@@ -1,0 +1,5 @@
+name: 'FormTask'
+type: module
+description: 'Form to perform Blocks task.'
+package: custom
+core_version_requirement: ^10

@@ -1,0 +1,5 @@
+name: 'Customblock'
+type: module
+description: 'Module to showcase custom block.'
+package: 'custom'
+core_version_requirement: ^10
