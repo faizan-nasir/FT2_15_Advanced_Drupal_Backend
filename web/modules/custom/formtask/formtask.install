@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains formtask module schema definitions.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function formtask_schema()
+{
+  $schema['form_task'] = [
+    'description' => 'Contains company details.',
+    'fields' => [
+      'id' => [
+        'description' => 'Holds the id',
+        'type' => 'serial',
+        'not null' => true,
+        'unsigned' => true,
+      ],
+      'parent_company' => [
+        'description' => 'Parent Company Name',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'labelone' => [
+        'description' => 'Label One',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'valueone' => [
+        'description' => 'First Value',
+        'type' => 'int',
+        'not null' => true,
+      ],
+      'labeltwo' => [
+        'description' => 'Label Two',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => true,
+      ],
+      'valuetwo' => [
+        'description' => 'Second Value',
+        'type' => 'int',
+        'not null' => true,
+      ]
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

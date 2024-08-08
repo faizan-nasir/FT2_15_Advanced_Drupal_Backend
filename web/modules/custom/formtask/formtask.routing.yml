@@ -1,0 +1,7 @@
+formtask.form_task:
+  path: '/form-task'
+  defaults:
+    _title: 'Form Task'
+    _form: 'Drupal\formtask\Form\FormTask'
+  requirements:
+    _permission: 'form task permission'
